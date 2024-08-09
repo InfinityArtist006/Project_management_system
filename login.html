@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      background-image: url('backs.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+    }
+    .top-nav {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .neon-text {
+      color: #fff;
+      text-shadow: 0 0 1px #fff, 0 0 5px #fff, 0 0 20px #39ff14, 0 0 30px #0cff85, 0 0 40px #0cff85, 0 0 55px #0cff85, 0 0 75px #0cff85;
+      font-size: 50px;
+    }
+    .form-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+      text-align: center;
+      font-size: 45px;
+      color: #fff;
+    }
+    input {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-nav">
+    <h1 class="neon-text">Project Management System</h1>
+  </div>
+  <div class="form-container">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label><br>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label><br>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
