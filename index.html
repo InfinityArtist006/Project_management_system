@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Flow - Project Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="dark-theme">
+    <div class="app">
+        <!-- Header (Persistent) -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">∞ <span>Cosmic Flow</span></h1>
+                <div class="header-actions">
+                    <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button id="userMenu" class="user-btn" style="display: none;">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <button id="logoutBtn" class="logout-btn" style="display: none;">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Sections (Toggled via JS) -->
+        <main class="main">
+            <!-- Landing Section -->
+            <section id="landing" class="page active">
+                <div class="hero">
+                    <h2 class="hero-title">Elevate Your Workflow</h2>
+                    <p class="hero-desc">Seamless project management in a cosmic canvas.</p>
+                    <button id="getStartedBtn" class="cta-btn">
+                        <i class="fas fa-rocket"></i> Enter the Flow
+                    </button>
+                </div>
+            </section>
+
+            <!-- Auth Section -->
+            <section id="auth" class="page">
+                <div class="glass-card auth-card">
+                    <div class="toggle-container">
+                        <button type="button" id="loginToggle" class="toggle-btn active">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </button>
+                        <button type="button" id="signupToggle" class="toggle-btn">
+                            <i class="fas fa-user-plus"></i> Sign Up
+                        </button>
+                    </div>
+                    <form id="authForm" class="auth-form">
+                        <div class="input-group">
+                            <input type="email" id="email" required>
+                            <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" id="password" required minlength="6">
+                            <label for="password"><i class="fas fa-lock"></i> Password</label>
+                        </div>
+                        <div class="input-group" id="confirmGroup" style="display: none;">
+                            <input type="password" id="confirmPassword">
+                            <label for="confirmPassword"><i class="fas fa-lock-open"></i> Confirm Password</label>
+                        </div>
+                        <button type="submit" id="submitBtn" class="submit-btn">
+                            <i class="fas fa-arrow-right"></i> Login
+                        </button>
+                        <p class="error" id="authError"></p>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="page">
+                <div class="dashboard-grid">
+                    <div class="projects-header">
+                        <h2>Your Cosmic Projects</h2>
+                        <form id="addProjectForm" class="add-form">
+                            <div class="input-group">
+                                <input type="text" id="projectName" placeholder=" " required>
+                                <label for="projectName"><i class="fas fa-project-diagram"></i> New Project</label>
+                            </div>
+                            <button type="submit" class="add-btn">
+                                <i class="fas fa-plus"></i> Launch
+                            </button>
+                        </form>
+                    </div>
+                    <div id="projectsList" class="projects-grid"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
